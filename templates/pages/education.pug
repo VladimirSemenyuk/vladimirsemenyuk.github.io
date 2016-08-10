@@ -1,11 +1,12 @@
 include ../config.pug
 include ../link.pug
+include ../block.pug
 
 mixin education
-        +page(EDUCATION_PAGE)
-            +link('Bauman Moscow State Technical University', 'www.bmstu.ru/en/')
-            span.education-years!= '(2006 &mdash; 2012)'
-            .degree Engineer's Degree in Computer Science
-            
-            
-                
+    +page(EDUCATION_PAGE)    
+        h2.degree Engineer's Degree in Computer Science
+        .degree-info!= 'Bauman Moscow State Technical University (2006 &mdash; 2012)'
+
+        ul.blocks-list
+            +block('10gen', null, null, 2013)
+                +link('M101P: MongoDB for Developers', 's3.amazonaws.com/edu-cert.10gen.com/downloads/882484eec280494baf9959391e130503/Certificate.pdf')                 

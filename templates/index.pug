@@ -1,0 +1,29 @@
+include ./config.pug
+include ./pages/summary.pug
+include ./pages/work-history.pug
+include ./pages/education.pug
+include ./pages/skills.pug
+include ./pages/articles.pug
+
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        title!= CONFIG.name + ' &mdash ' + CONFIG.description
+        link(href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,300italic,300' rel='stylesheet' type='text/css')
+        link(rel='stylesheet' type='text/css' href='/style.css')
+    body
+        .header 
+            .header__portrait
+            h1.header__name= CONFIG.name
+            .header__description= CONFIG.description
+        
+        ul.body 
+            +summary
+            +work_history
+            +education
+            +skills
+            +articles
+                        
+        
+    

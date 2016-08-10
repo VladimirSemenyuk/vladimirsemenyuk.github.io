@@ -1,58 +1,52 @@
 include ../config.pug
 include ../page.pug
-include ../block.pug
 include ../link.pug
+include ../block.pug
+
+mixin responsibilities
+    ul.responsibilities-list
+        block
 
 mixin responsibility
     li.responsibilities-list__item
         block
 
-mixin job(name, linkText, href, dateStart, dateEnd)
-    li.jobs-list__item
-        .jobs-list__item__left
-            if href
-                +link(linkText, href)
-            else 
-                !=linkText    
-            .jobs-list__item__dates!= dateStart + ' &mdash; ' + (dateEnd ? dateEnd : 'Present') 
-
-        .jobs-list__item__right
-            .jobs-list__item__name= name
-            ul.responsibilities-list
-                block
-
 mixin work_history
         +page(WORK_HISTORY_PAGE)
-            ul.jobs-list
-                +job('Head of Clientside Development Department', 'Target.My.com', 'target.my.com', 2013)
-                    +responsibility 
-                        | Development of 
-                        +link('Target.My.com', 'target.my.com') 
-                        | and        
-                        +link('Tracker.My.com', 'target.my.com')
-                    +responsibility
-                        | Development and maintenance of ads' templates and scripts at VK.com, Odnoklassniki.com, Mail.ru and other.
-                    +responsibility
-                        | General components library development.
-                    +responsibility
-                        | Controlling department of 3 teams.
-                    +responsibility
-                        | Training, code review, task decomposition, plannning.
+            ul.blocks-list
+                +block('Target.My.com', 'Head of Frontend Development Department', 'target.my.com', 2013)
+                    +responsibilities
+                        +responsibility 
+                            | Development of 
+                            +link('Target.My.com', 'target.my.com') 
+                            = ' and '        
+                            +link('Tracker.My.com', 'target.my.com')
+                        +responsibility
+                            | Development and maintenance of ads' templates and scripts at VK.com, Odnoklassniki.ru, Mail.ru and other.
+                        +responsibility
+                            | UI components library development.
+                        +responsibility
+                            | Controlling department of 3 teams.
+                        +responsibility
+                            | Training, code review, task decomposition, plannning.
 
-                +job('Frontend Developer', 'DeniVIP Media', 'www.denivip.ru/en.html', 2012, 2013)
-                    +responsibility 
-                        | Development of 
-                        +link('NTVPlus.tv', 'www.ntvplus.tv')
-                    +responsibility
-                        | Controlling team of 3 members.
+                +block('DeniVIP Media', 'Frontend Developer', 'www.denivip.ru/en.html', 2012, 2013)
+                    +responsibilities
+                        +responsibility 
+                            | Development of 
+                            +link('NTVPlus.tv', 'www.ntvplus.tv')
+                        +responsibility
+                            | Controlling team of 3 members.
 
-                +job('Frontend Developer', 'Sapato', 'www.sapato.ru', 2012, 2012)
-                    +responsibility 
-                        | Development of 
-                        +link('Sapato.ru', 'www.sapato.ru')
-                    +responsibility 
-                        | Creation of mailings and promo stuff.
+                +block('Sapato', 'Frontend Developer', 'www.sapato.ru', 2012, 2012)
+                    +responsibilities
+                        +responsibility 
+                            | Development of 
+                            +link('Sapato.ru', 'www.sapato.ru')
+                        +responsibility 
+                            | Creation of mailings and promo stuff.
 
-                +job('Developer', 'Web and Print', null, START_CAREER_YEAR, 2012)
-                    +responsibility 
-                        | Development lots of small sites using PHP, Javascript.
+                +block('Web and Print', 'Developer', null, START_CAREER_YEAR, 2012)
+                    +responsibilities
+                        +responsibility 
+                            | Development of lots of small sites using PHP, Javascript.

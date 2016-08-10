@@ -1,2 +1,20 @@
-mixin block
-    block
+include ./link.pug
+
+mixin block(linkText, name, href, dateStart, dateEnd)
+    li.blocks-list__item
+        .blocks-list__item__left
+            .blocks-list__item__left__text
+                if href
+                    +link(linkText, href)
+                else 
+                    != linkText    
+            
+            if dateStart    
+                .blocks-list__item__dates!= dateStart + ' &mdash; ' + (dateEnd ? dateEnd : 'Present') 
+
+        .blocks-list__item__right
+            if name
+                .blocks-list__item__name
+                    h2= name
+            
+            block
