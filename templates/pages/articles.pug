@@ -1,0 +1,18 @@
+include ../config.pug
+include ../link.pug
+
+mixin article(text, href, year)
+    li.articles-list__item
+        != year + ' &mdash; '
+        +link(text, href)
+
+mixin articles
+    +page(ARTICLES_PAGE)
+        ul.articles-list
+            +article('Pitfalls in Large-Scale Application Development on Node.js', 'blog.denivip.ru/index.php/2013/01/pitfalls-in-large-scale-application-development-on-node-js/?lang=en', 2013)
+            +article('Workflow and Frontend Development Tools', 'blog.denivip.ru/index.php/2012/12/workflow-and-frontend-development-tools/?lang=en', 2012)
+            +article('How to develop highload services on Node.js', 'blog.denivip.ru/index.php/2012/11/how-to-develop-highload-services-on-node-js/?lang=en', 2012)
+            +article('HTML5 Application Optimization', 'blog.denivip.ru/index.php/2012/07/html5-application-optimization/?lang=en', 2012)
+            +article('How to Develop Large-Scale JavaScript Based Applications', 'blog.denivip.ru/index.php/2012/07/how-to-develop-large-scale-javascript-based-applications/?lang=en', 2012)
+            +article('HTML5 <video> Analytics', 'blog.denivip.ru/index.php/2012/06/html5-analytics/?lang=en', 2012)
+            +article('HTML5 Video Player Development', 'blog.denivip.ru/index.php/2012/06/html5-player-development/?lang=en', 2012)

@@ -1,0 +1,8 @@
+include ./block.pug
+
+mixin page(page)
+    li.page(id='page-' + page.name)
+        +block
+            h1!= page.description
+
+        block

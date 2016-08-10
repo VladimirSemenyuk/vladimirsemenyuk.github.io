@@ -1,0 +1,11 @@
+include ../config.pug
+include ../link.pug
+
+mixin education
+        +page(EDUCATION_PAGE)
+            +link('Bauman Moscow State Technical University', 'www.bmstu.ru/en/')
+            span.education-years!= '(2006 &mdash; 2012)'
+            .degree Engineer's Degree in Computer Science
+            
+            
+                

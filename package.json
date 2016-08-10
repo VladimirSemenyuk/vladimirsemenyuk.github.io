@@ -1,0 +1,22 @@
+{
+  "name": "vladimirsemenyuk",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "render": "pug <templates/base.pug> index.html -P -p templates/base.pug"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VladimirSemenyuk/vladimirsemenyuk.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VladimirSemenyuk/vladimirsemenyuk/issues"
+  },
+  "homepage": "https://github.com/VladimirSemenyuk/vladimirsemenyuk#readme",
+  "devDependencies": {
+    "pug": "^2.0.0-beta5"
+  }
+}

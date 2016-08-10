@@ -1,0 +1,5 @@
+mixin pages_list(pages)
+    ul.pages-list
+        each page in pages
+            li.pages-list__item(id='pages-list-item-' + page.name)= page.description
+                != page.content
