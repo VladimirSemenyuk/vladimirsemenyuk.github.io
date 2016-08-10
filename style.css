@@ -82,10 +82,12 @@ h2 {
 .page-wrapper {
   padding-left: 25px;
 }
-.summaries-list {
+.summaries-list,
+.more-list {
   padding-left: 25px;
 }
-.summaries-list__item {
+.summaries-list__item,
+.more-list__item {
   list-style-type: disc;
 }
 .blocks-list {

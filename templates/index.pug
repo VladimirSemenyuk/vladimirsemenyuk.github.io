@@ -4,13 +4,14 @@ include ./pages/work-history.pug
 include ./pages/education.pug
 include ./pages/skills.pug
 include ./pages/articles.pug
+include ./pages/more.pug
 
 doctype html
 html(lang="en")
     head
         meta(charset="UTF-8")
         title!= CONFIG.name + ' &mdash; ' + CONFIG.description
-        link(href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,300italic,300' rel='stylesheet' type='text/css')
+        link(href='https://fonts.googleapis.com/css?family=Open+Sans:400,300italic' rel='stylesheet' type='text/css')
         link(rel='stylesheet' type='text/css' href='/style.css')
     body
         .header 
@@ -24,6 +25,7 @@ html(lang="en")
             +education
             +skills
             +articles
+            +more
                         
         
     
