@@ -56,15 +56,34 @@
   left: -25px;
 }
 html {
-  background: #4480b8 url("/images/background.jpg") no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
+  background: #4480b8;
   color: #ddd;
   font-family: 'Open Sans', sans-serif;
   font-size: 0.9em;
   line-height: 1.7em;
   text-shadow: 0px 1px 1px rgba(20,20,20,0.7);
   font-weight: 100;
+}
+@media (max-width: 1300px) {
+  html {
+    background: #4480b8 url("/images/background-small.jpg") no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+}
+@media (min-width: 1301px) and (max-width: 2700px) {
+  html {
+    background: #4480b8 url("/images/background-medium.jpg") no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+}
+@media (min-width: 2701px) {
+  html {
+    background: #4480b8 url("/images/background.jpg") no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
 }
 a {
   color: #f5f5f5;
