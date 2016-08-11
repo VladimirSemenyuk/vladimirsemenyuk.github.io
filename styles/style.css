@@ -1,3 +1,60 @@
+@font-face {
+  font-family: 'fontello';
+  src: url("../font/fontello.eot?96255276");
+  src: url("../font/fontello.eot?96255276#iefix") format('embedded-opentype'), url("../font/fontello.woff?96255276") format('woff'), url("../font/fontello.ttf?96255276") format('truetype'), url("../font/fontello.svg?96255276#fontello") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.git {
+  position: relative;
+  margin-left: 25px;
+}
+.git:before {
+  font-family: "fontello";
+  content: '\f113';
+  position: absolute;
+  left: -25px;
+}
+.fb {
+  position: relative;
+  margin-left: 25px;
+}
+.fb:before {
+  font-family: "fontello";
+  content: '\E802';
+  position: absolute;
+  left: -25px;
+}
+.in {
+  position: relative;
+  margin-left: 25px;
+}
+.in:before {
+  font-family: "fontello";
+  content: '\f0e1';
+  position: absolute;
+  left: -25px;
+}
+.mail {
+  position: relative;
+  margin-left: 25px;
+}
+.mail:before {
+  font-family: "fontello";
+  content: '\f0e0';
+  position: absolute;
+  left: -25px;
+}
+.tele {
+  position: relative;
+  margin-left: 25px;
+}
+.tele:before {
+  font-family: "fontello";
+  content: '\f124';
+  position: absolute;
+  left: -25px;
+}
 html {
   background: #4480b8 url("/images/background.jpg") no-repeat;
   background-size: cover;
@@ -44,6 +101,7 @@ h2 {
 }
 .header {
   text-align: center;
+  position: relative;
 }
 .header__portrait {
   width: 170px;
@@ -65,6 +123,42 @@ h2 {
   color: #333;
   text-shadow: none;
   line-height: 0em;
+}
+.header .git {
+  position: absolute;
+  bottom: -40px;
+  right: 4px;
+}
+.header .git:before {
+  text-shadow: none;
+  color: rgba(20,20,20,0.7);
+}
+.header .fb {
+  position: absolute;
+  bottom: -40px;
+  right: 60px;
+}
+.header .fb:before {
+  text-shadow: none;
+  color: rgba(20,20,20,0.7);
+}
+.header .in {
+  position: absolute;
+  bottom: -40px;
+  right: 31px;
+}
+.header .in:before {
+  text-shadow: none;
+  color: rgba(20,20,20,0.7);
+}
+.header .mail {
+  position: absolute;
+  bottom: -40px;
+  right: 90px;
+}
+.header .mail:before {
+  text-shadow: none;
+  color: rgba(20,20,20,0.7);
 }
 .page {
   background-color: rgba(20,20,20,0.7);
@@ -130,30 +224,19 @@ h2 {
   padding-left: 25px;
 }
 .skills-list,
-.articles-list {
+.articles-list,
+.contacts-list {
   padding: 0;
   list-style: none;
 }
 .skills-list__item,
-.articles-list__item {
+.articles-list__item,
+.contacts-list__item {
   margin-bottom: 5px;
-}
-.skills-list__item {
-  margin-bottom: 35px;
 }
 .skill-text {
   font-style: italic;
   color: #ccc;
-}
-.skill-bar {
-  width: 100%;
-  height: 1px;
-  background-color: #666;
-  margin-top: 5px;
-}
-.skill-bar__inner {
-  height: 1px;
-  background-color: #ddd;
 }
 .degree,
 .certificates {

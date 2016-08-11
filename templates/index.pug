@@ -1,10 +1,12 @@
 include ./config.pug
+include ./link.pug
 include ./pages/summary.pug
 include ./pages/work-history.pug
 include ./pages/education.pug
 include ./pages/skills.pug
 include ./pages/articles.pug
 include ./pages/more.pug
+include ./pages/contacts.pug
 
 doctype html
 html(lang="en")
@@ -29,12 +31,17 @@ html(lang="en")
         meta(name="msapplication-TileImage" content="/ms-icon-144x144.png")
         meta(name="theme-color" content="#ffffff")
         link(href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,300italic' rel='stylesheet' type='text/css')
-        link(rel='stylesheet' type='text/css' href='/style.css')
+        link(rel='stylesheet' type='text/css' href='styles/style.css')
     body
         .header 
             .header__portrait
             h1.header__name= CONFIG.name
             .header__description= CONFIG.description
+            
+            +mail_link('','mail@vladimir.pro')(class="mail")
+            +link('','www.facebook.com/vladimir.semenyuk.31')(class="fb")
+            +link('','www.linkedin.com/in/vladimir-semenyuk-9b417871')(class="in")
+            +link('','github.com/VladimirSemenyuk/')(class="git")
         
         ul.body 
             +summary
@@ -43,6 +50,7 @@ html(lang="en")
             +skills
             +articles
             +more
+            +contacts
                         
         
     script.

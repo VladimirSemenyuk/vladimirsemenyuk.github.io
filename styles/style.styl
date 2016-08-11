@@ -8,6 +8,47 @@ $width = 1100px
 $leftBlockWidth = 275px
 $bodyPadding = 25px
 
+@font-face
+    font-family 'fontello'
+    src url('../font/fontello.eot?96255276')
+    src url('../font/fontello.eot?96255276#iefix') format('embedded-opentype'), url('../font/fontello.woff?96255276') format('woff'), url('../font/fontello.ttf?96255276') format('truetype'), url('../font/fontello.svg?96255276#fontello') format('svg')
+    font-weight normal
+    font-style normal
+
+ico(text)
+    position relative
+    margin-left $bodyPadding
+
+    &:before
+        font-family: "fontello";
+        content text
+        position absolute
+        left - $bodyPadding  
+
+topIco(right) 
+    position absolute
+    bottom -40px
+    right right
+
+    &:before
+        text-shadow none
+        color $bodyBackgroundColor
+
+.git
+    ico('\f113')
+
+.fb
+    ico('\E802')
+
+.in
+    ico('\f0e1')    
+
+.mail
+    ico('\f0e0')    
+
+.tele
+    ico('\f124')    
+
 html
     background $backgroundColor url('/images/background.jpg') no-repeat
     background-size cover
@@ -55,6 +96,7 @@ h2
 
  .header
     text-align center
+    position relative
 
     &__portrait
         width 170px
@@ -76,6 +118,19 @@ h2
         color #333
         text-shadow none
         line-height 0em
+
+    & .git
+        topIco(4px)
+
+    & .fb
+        topIco(60px)
+
+    & .in
+        topIco(31px)
+
+    & .mail
+        topIco(90px)
+              
 
 .page
     background-color $bodyBackgroundColor
@@ -137,29 +192,30 @@ h2
 
 .skills-list
 .articles-list
+.contacts-list
     padding 0
     list-style none
 
     &__item
         margin-bottom 5px
 
-.skills-list
-    &__item
-        margin-bottom 35px
+// .skills-list
+//     &__item
+//         margin-bottom 35px
 
 .skill-text 
     font-style italic
     color $darkTextColor
     
-.skill-bar
-    width: 100%
-    height 1px
-    background-color #666
-    margin-top: 5px
+// .skill-bar
+//     width: 100%
+//     height 1px
+//     background-color #666
+//     margin-top: 5px
 
-    &__inner
-        height 1px
-        background-color $textColor
+//     &__inner
+//         height 1px
+//         background-color $textColor
 
 .degree
 .certificates

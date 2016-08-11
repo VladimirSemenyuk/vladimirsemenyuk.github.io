@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run render && node node_modules/http-server/bin/http-server",
-    "render": "stylus styles/style.styl --out ./ && pug <templates/index.pug> index.html -p templates/base.pug"
+    "render": "stylus styles/style.styl --out ./styles && pug <templates/index.pug> index.html -p templates/base.pug"
   },
   "repository": {
     "type": "git",
