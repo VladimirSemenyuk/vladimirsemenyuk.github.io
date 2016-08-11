@@ -143,51 +143,6 @@ h2 {
   text-shadow: none;
   line-height: 0em;
 }
-.header .git {
-  position: absolute;
-  bottom: -40px;
-  right: 31px;
-}
-.header .git:before {
-  text-shadow: none;
-  color: rgba(20,20,20,0.7);
-}
-.header .fb {
-  position: absolute;
-  bottom: -40px;
-  right: 90px;
-}
-.header .fb:before {
-  text-shadow: none;
-  color: rgba(20,20,20,0.7);
-}
-.header .in {
-  position: absolute;
-  bottom: -40px;
-  right: 60px;
-}
-.header .in:before {
-  text-shadow: none;
-  color: rgba(20,20,20,0.7);
-}
-.header .mail {
-  position: absolute;
-  bottom: -40px;
-  right: 120px;
-}
-.header .mail:before {
-  text-shadow: none;
-  color: rgba(20,20,20,0.7);
-}
-.header .tele {
-  position: absolute;
-  bottom: -40px;
-  right: 4px;
-}
-.header .tele:before {
-  text-shadow: none;
-  color: rgba(20,20,20,0.7);
-}
 .page {
   background-color: rgba(20,20,20,0.7);
   margin: 1px 0;
@@ -210,7 +165,7 @@ h2 {
 }
 .summaries-list,
 .more-list {
-  padding-left: 25px;
+  padding-left: 20px;
 }
 .summaries-list__item,
 .more-list__item {
@@ -249,7 +204,7 @@ h2 {
   font-style: italic;
   list-style-type: disc;
   color: #ccc;
-  padding-left: 25px;
+  padding-left: 20px;
 }
 .skills-list,
 .articles-list,
@@ -261,6 +216,9 @@ h2 {
 .articles-list__item,
 .contacts-list__item {
   margin-bottom: 5px;
+}
+.contacts-list {
+  padding-left: 3px;
 }
 .skill-text {
   font-style: italic;

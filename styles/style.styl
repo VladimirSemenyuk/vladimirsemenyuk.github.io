@@ -7,6 +7,7 @@ $darkTextColor = #cccccc
 $width = 1100px
 $leftBlockWidth = 275px
 $bodyPadding = 25px
+$listPadding = 20px
 
 @font-face
     font-family 'fontello'
@@ -135,20 +136,20 @@ h2
         text-shadow none
         line-height 0em
 
-    & .git
-        topIco(31px)
+    // & .git
+    //     topIco(31px)
 
-    & .fb
-        topIco(90px)
+    // & .fb
+    //     topIco(90px)
 
-    & .in
-        topIco(60px)
+    // & .in
+    //     topIco(60px)
 
-    & .mail
-        topIco(120px)
+    // & .mail
+    //     topIco(120px)
 
-    & .tele
-        topIco(4px)    
+    // & .tele
+    //     topIco(4px)    
               
 
 .page
@@ -170,7 +171,8 @@ h2
 
 .summaries-list
 .more-list
-    padding-left $bodyPadding
+    padding-left $listPadding
+
     &__item
         list-style-type disc
         color $textColor
@@ -207,7 +209,7 @@ h2
     font-style italic
     list-style-type disc
     color $darkTextColor
-    padding-left $bodyPadding
+    padding-left $listPadding
 
 .skills-list
 .articles-list
@@ -217,6 +219,9 @@ h2
 
     &__item
         margin-bottom 5px
+
+.contacts-list
+    padding-left 3px        
 
 // .skills-list
 //     &__item
