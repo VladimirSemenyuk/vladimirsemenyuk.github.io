@@ -146,7 +146,7 @@ h2 {
 .header .git {
   position: absolute;
   bottom: -40px;
-  right: 4px;
+  right: 31px;
 }
 .header .git:before {
   text-shadow: none;
@@ -155,7 +155,7 @@ h2 {
 .header .fb {
   position: absolute;
   bottom: -40px;
-  right: 60px;
+  right: 90px;
 }
 .header .fb:before {
   text-shadow: none;
@@ -164,7 +164,7 @@ h2 {
 .header .in {
   position: absolute;
   bottom: -40px;
-  right: 31px;
+  right: 60px;
 }
 .header .in:before {
   text-shadow: none;
@@ -173,9 +173,18 @@ h2 {
 .header .mail {
   position: absolute;
   bottom: -40px;
-  right: 90px;
+  right: 120px;
 }
 .header .mail:before {
+  text-shadow: none;
+  color: rgba(20,20,20,0.7);
+}
+.header .tele {
+  position: absolute;
+  bottom: -40px;
+  right: 4px;
+}
+.header .tele:before {
   text-shadow: none;
   color: rgba(20,20,20,0.7);
 }
