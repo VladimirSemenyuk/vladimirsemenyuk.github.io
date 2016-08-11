@@ -24,6 +24,9 @@ a
     text-decoration none
     border-bottom 1px dotted $lightTextColor
 
+    &:hover
+        border-bottom 1px solid $lightTextColor
+
 body
     width $width
     margin 0 auto
@@ -57,6 +60,7 @@ h2
         width 170px
         height 170px
         border-radius 85px
+        border: 2px solid $textColor
         box-shadow 0 2px 2px $bodyBackgroundColor
         margin 35px auto
         background url(/images/portrait.jpg) center center no-repeat
@@ -95,6 +99,8 @@ h2
     padding-left $bodyPadding
     &__item
         list-style-type disc
+        color $textColor
+        font-weight 300
 
 .blocks-list
     list-style none
@@ -134,6 +140,9 @@ h2
     padding 0
     list-style none
 
+    &__item
+        margin-bottom 5px
+
 .skills-list
     &__item
         margin-bottom 35px
@@ -162,4 +171,6 @@ h2
     margin-bottom $bodyPadding
     margin-left $leftBlockWidth
 
-
+.article
+    color $darkTextColor
+    font-style italic
