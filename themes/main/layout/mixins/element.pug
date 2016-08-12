@@ -1,0 +1,5 @@
+mixin element(element)
+    li.element(id='element-' + element.name)
+        h1!= element.description
+        .element-wrapper
+            block

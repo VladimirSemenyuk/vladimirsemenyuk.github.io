@@ -93,7 +93,6 @@ body
     list-style none
     margin 70px 0 40px
     padding 0
-    box-shadow 0 2px 2px $shadowColor
 
 h1
     text-transform uppercase
@@ -150,23 +149,28 @@ h2
 
     // & .tele
     //     topIco(4px)    
-              
 
-.page
+.elements-list  
+    list-style none
+    margin 70px 0 40px
+    padding 0
+    box-shadow 0 2px 2px $shadowColor              
+
+.element
     background-color $bodyBackgroundColor
     margin 1px 0
     padding 15px $bodyPadding 35px $leftBlockWidth + $bodyPadding
 
-    &#page-work-history
-    &#page-education
-    &#page-skills
-    &#page-articles
+    &#element-work-history
+    &#element-education
+    &#element-skills
+    &#element-articles
         padding-left $bodyPadding
 
         & h1
             margin-left $leftBlockWidth
 
-.page-wrapper
+.element-wrapper
     padding-left $bodyPadding
 
 .summaries-list

@@ -1,0 +1,3 @@
+mixin mail_link(text, addr)
+    a(href!= 'mailto:' + addr class!=attributes.class)= text    
+    

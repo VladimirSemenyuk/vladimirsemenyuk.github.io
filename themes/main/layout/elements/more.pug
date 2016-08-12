@@ -1,0 +1,11 @@
+include ../mixins/element.pug
+
+mixin more_item(text)
+    li.more-list__item!= text
+    
++element(config.elements.more)
+    ul.more-list
+        +more_item('Love fitness and cycling')
+        +more_item('Really fond of music')
+        +more_item('Study to play the guitar')
+                    

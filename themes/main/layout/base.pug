@@ -1,18 +1,10 @@
-include ./config.pug
-include ./link.pug
-include ./pages/summary.pug
-include ./pages/work-history.pug
-include ./pages/education.pug
-include ./pages/skills.pug
-include ./pages/articles.pug
-include ./pages/more.pug
-include ./pages/contacts.pug
+//include ./mixins/m-post.pug
 
 doctype html
 html(lang="en")
     head
         meta(charset="UTF-8")
-        title!= CONFIG.name + ' &mdash; ' + CONFIG.description
+        title= config.title + ' ' + config.subtitle 
         link(rel="apple-touch-icon" sizes="57x57" href="/images/apple-icon-57x57.png")
         link(rel="apple-touch-icon" sizes="60x60" href="/images/apple-icon-60x60.png")
         link(rel="apple-touch-icon" sizes="72x72" href="/images/apple-icon-72x72.png")
@@ -31,34 +23,28 @@ html(lang="en")
         meta(name="msapplication-TileImage" content="/ms-icon-144x144.png")
         meta(name="theme-color" content="#ffffff")
         link(href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,300italic' rel='stylesheet' type='text/css')
-        link(rel='stylesheet' type='text/css' href='styles/style.css')
+        link(rel='stylesheet' type='text/css' href='/styles/style.css')
+
     body
         .header 
             .header__portrait
-            h1.header__name= CONFIG.name
-            .header__description= CONFIG.description
+            h1.header__name= config.title
+            .header__description= config.subtitle
             
             //+mail_link('','mail@vsemenyuk.pro')(class="mail")
             //+link('','www.facebook.com/vladimir.semenyuk.31')(class="fb")
             //+link('','www.linkedin.com/in/vladimir-semenyuk-9b417871')(class="in")
             //+link('','github.com/VladimirSemenyuk/')(class="git")
             //+link('','telegram.me/vladimirsemenyuk')(class="tele")
-        
-        ul.body 
-            +summary
-            +work_history
-            +education
-            +skills
-            +articles
-            +more
-            +contacts
-                        
-        
-    script.
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-        ga('create', 'UA-82311544-1', 'auto');
-        ga('send', 'pageview');
+        .body 
+            block content
+
+    script.
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-82311544-1', 'auto');
+            ga('send', 'pageview');
