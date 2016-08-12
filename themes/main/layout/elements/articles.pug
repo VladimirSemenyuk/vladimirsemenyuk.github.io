@@ -11,16 +11,27 @@ mixin article(text, href)
         +link(text, href)(class='article')
 
 +element(config.elements.articles)
+    - 
+        var groupedPostsByYear = _.groupBy(site.posts.data, function(post) {
+            return post.date.format('YYYY');
+        });
+
     ul.articles-list
+        each posts, year in groupedPostsByYear
+            +info_block(year)
+                +articles-list
+                    each post in posts
+                        +article(post.title, post.path)    
+
         +info_block(2013)
             +articles-list
-                +article('Pitfalls in Large-Scale Application Development on Node.js', 'blog.denivip.ru/index.php/2013/01/pitfalls-in-large-scale-application-development-on-node-js/?lang=en')
+                +article('Pitfalls in Large-Scale Application Development on Node.js', 'http://blog.denivip.ru/index.php/2013/01/pitfalls-in-large-scale-application-development-on-node-js/?lang=en')
 
         +info_block(2012)
             +articles-list    
-                +article('Workflow and Frontend Development Tools', 'blog.denivip.ru/index.php/2012/12/workflow-and-frontend-development-tools/?lang=en')
-                +article('How to Develop Highload Services on Node.js', 'blog.denivip.ru/index.php/2012/11/how-to-develop-highload-services-on-node-js/?lang=en')
-                +article('HTML5 Application Optimization', 'blog.denivip.ru/index.php/2012/07/html5-application-optimization/?lang=en')
-                +article('How to Develop Large-Scale JavaScript Based Applications', 'blog.denivip.ru/index.php/2012/07/how-to-develop-large-scale-javascript-based-applications/?lang=en')
-                +article('HTML5 <video> Analytics', 'blog.denivip.ru/index.php/2012/06/html5-analytics/?lang=en')
-                +article('HTML5 Video Player Development', 'blog.denivip.ru/index.php/2012/06/html5-player-development/?lang=en')
+                +article('Workflow and Frontend Development Tools', 'http://blog.denivip.ru/index.php/2012/12/workflow-and-frontend-development-tools/?lang=en')
+                +article('How to Develop Highload Services on Node.js', 'http://blog.denivip.ru/index.php/2012/11/how-to-develop-highload-services-on-node-js/?lang=en')
+                +article('HTML5 Application Optimization', 'http://blog.denivip.ru/index.php/2012/07/html5-application-optimization/?lang=en')
+                +article('How to Develop Large-Scale JavaScript Based Applications', 'http://blog.denivip.ru/index.php/2012/07/how-to-develop-large-scale-javascript-based-applications/?lang=en')
+                +article('HTML5 <video> Analytics', 'http://blog.denivip.ru/index.php/2012/06/html5-analytics/?lang=en')
+                +article('HTML5 Video Player Development', 'http://blog.denivip.ru/index.php/2012/06/html5-player-development/?lang=en')

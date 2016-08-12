@@ -12,13 +12,13 @@ mixin responsibility
 
 +element(config.elements.work_history)
     ul.blocks-list
-        +info_block('Target.My.com', 'Head of Frontend Development Department', 'target.my.com', 2013)
+        +info_block('Target.My.com', 'Head of Frontend Development Department', '//target.my.com', 2013)
             +responsibilities
                 +responsibility 
                     | Development of 
-                    +link('Target.My.com', 'target.my.com') 
+                    +link('Target.My.com', 'http://target.my.com') 
                     = ' and '        
-                    +link('Tracker.My.com', 'target.my.com')
+                    +link('Tracker.My.com', 'http://target.my.com')
                 +responsibility
                     | Development and maintenance of ad templates and scripts at VK.com, Odnoklassniki.ru, Mail.ru and other
                 +responsibility
@@ -28,11 +28,11 @@ mixin responsibility
                 +responsibility
                     | Training, code review, task decomposition, planning
 
-        +info_block('DeniVIP Media', 'Frontend Developer', 'www.denivip.ru/en.html', 2012, 2013)
+        +info_block('DeniVIP Media', 'Frontend Developer', 'http://www.denivip.ru/en.html', 2012, 2013)
             +responsibilities
                 +responsibility 
                     | Development of 
-                    +link('NTVPlus.tv', 'www.ntvplus.tv')
+                    +link('NTVPlus.tv', 'http://www.ntvplus.tv')
                 +responsibility
                     | Controlling team of 3 members
 
