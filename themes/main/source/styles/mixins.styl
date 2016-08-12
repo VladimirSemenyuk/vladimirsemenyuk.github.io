@@ -1,0 +1,32 @@
+$backgroundColor = #4480B8
+$bodyBackgroundColor = rgba(20,20,20,0.7)
+$bodyLightBackgroundColor = rgba(240,240,240,0.95)
+$shadowColor = rgba(20,20,20,0.3)
+$width = 1100px
+$leftBlockWidth = 275px
+$bodyPadding = 25px
+$listPadding = 20px
+$lightTextColor = #f5f5f5
+$textColor = #dddddd
+$darkTextColor = #cccccc
+$blackTextColor = #333333
+$greyTextColor = #555555
+
+ico(text)
+    position relative
+    margin-left $bodyPadding
+
+    &:before
+        font-family: "fontello";
+        content text
+        position absolute
+        left - $bodyPadding  
+
+topIco(right) 
+    position absolute
+    bottom -40px
+    right right
+
+    &:before
+        text-shadow none
+        color $bodyBackgroundColor

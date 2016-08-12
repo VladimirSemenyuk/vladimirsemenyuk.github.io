@@ -6,9 +6,9 @@ mixin articles-list
     ul.articles-list
         block
 
-mixin article(text, href)
+mixin article(text, href, sameWindow)
     li.articles-list__item
-        +link(text, href)(class='article')
+        +link(text, href, sameWindow)(class='article')
 
 +element(config.elements.articles)
     - 
@@ -21,7 +21,7 @@ mixin article(text, href)
             +info_block(year)
                 +articles-list
                     each post in posts
-                        +article(post.title, post.path)    
+                        +article(post.title, post.path, true)    
 
         +info_block(2013)
             +articles-list

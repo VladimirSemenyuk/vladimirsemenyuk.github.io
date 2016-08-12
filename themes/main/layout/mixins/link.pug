@@ -1,3 +1,6 @@
-mixin link(text, href)
-    a(href!=  href target='_blank' class!=attributes.class)= text
+mixin link(text, href, sameWindow)
+    if sameWindow 
+        a(href!=  href class!=attributes.class)= text
+    else
+        a(href!=  href target='_blank' class!=attributes.class)= text    
     

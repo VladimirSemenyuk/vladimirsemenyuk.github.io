@@ -1,0 +1,62 @@
+extends ./base.pug
+
+block title
+    = page.title 
+
+block head
+    link(rel='stylesheet' type='text/css' href='/styles/post.css')  
+    script(src='/scripts/highlight.pack.js')
+
+mixin tags(tags)
+    - 
+        var t = [];
+        for (var i = 0; i < tags.data.length; i++) {
+            t.push(tags.data[i].name);
+        }
+
+    if t.length
+        .post__tags.tags!= t.join(', ')  
+
+mixin categories(categories)
+    - 
+        var c = [];
+        for (var i = 0; i < categories.data.length; i++) {
+            c.push(categories.data[i].name);
+        }
+
+    if c.length
+        .post__categories.doc!= c.join(', ')      
+
+block content
+    div(id='fb-root')
+    
+    script.
+        (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7";
+        fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    .post
+        .post__header
+            h1.post__title= page.title
+            .post__meta
+                .post__date.clndr= page.date.format('YYYY MMM DD')
+                +categories(page.categories)
+                +tags(page.tags)
+
+        .post__content!= page.content
+
+        .post__comments
+            .fb-comments(data-href!=page.link data-width='1050' data-numposts='3')
+
+    script.
+        var pres = document.getElementsByTagName('pre'),
+            l = pres.length;
+
+        for (var i = 0; i < l; i++) {
+            hljs.highlightBlock(pres[i]);
+        }
+
+        

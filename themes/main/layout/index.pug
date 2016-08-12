@@ -1,5 +1,11 @@
 extends ./base.pug
 
+block title
+    != config.subtitle 
+
+block head
+    link(rel='stylesheet' type='text/css' href='/styles/index.css')    
+
 block content
     ul.elements-list
         include ./elements/summary.pug
