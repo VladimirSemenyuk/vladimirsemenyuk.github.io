@@ -14,12 +14,12 @@ timezone:
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: http://vsemenyuk.pro
 root: /
-permalink: :year/:title/
+permalink: articles/:title/
 permalink_defaults:
 
 # Directory
 source_dir: source
-public_dir: articles
+public_dir: public
 tag_dir: tags
 archive_dir: archives
 category_dir: categories
@@ -79,13 +79,13 @@ elements:
     description: 'Work History'
   education:
     name: 'education'
-    description: 'Education'  
+    description: 'Education & Certificates'  
   skills:
     name: 'skills'
     description: 'Skills'  
   articles:
     name: 'articles'
-    description: 'Articles'
+    description: 'Articles & Publications'
   more:
     name: 'more'
     description: 'More'
