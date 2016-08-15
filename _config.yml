@@ -42,9 +42,6 @@ highlight:
   line_number: true
   auto_detect: true
   tab_replace: true
-prism_plugin:
-  mode: 'preprocess' 
-  theme: 'default'
 markdown:
   render:
     html: true
@@ -92,7 +89,7 @@ theme: main
 deploy:
   type: git
   repo: https://github.com/VladimirSemenyuk/vladimirsemenyuk.github.io
-  branch: test
+  branch: master
 
 degree: Engineer's degree in Information Systems and Technologies
 elements:
