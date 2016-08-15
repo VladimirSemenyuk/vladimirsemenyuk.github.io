@@ -7,20 +7,33 @@
 
     &__title
         color #333333
-        margin 10px 0 20px
+        margin 0 0 20px
+        line-height 1.5em
         letter-spacing 0em
+        text-shadow 0 1px 1px rgba(0,0,0,0.2)
         
     &__meta
         color $greyTextColor
 
         & *
-            margin-right $bodyPadding * 2
+            margin-right 40px
             display inline-block  
 
     &__tags
         font-style italic
 
-    &__content   
+    &__content
+        & code
+            font-size: 1.2em;
+            background-color: #ccc;
+            padding: 2px 5px;
+            border-radius: 2px
+
+        & hr
+            margin-top: 2px;
+            border: none;
+            margin-bottom: 2px;
+
         & a
             color $greyTextColor
             text-decoration none
@@ -30,29 +43,85 @@
                 color $blackTextColor
                 border-bottom 1px dotted $blackTextColor
 
+        & h1
         & h2
         & h3
         & h4
         & h5
         & h6
+        & ul
+        & ol
+        & blockquote
             color $blackTextColor
             font-weight 400
             background-color $bodyLightBackgroundColor
             margin 0
             padding $bodyPadding $bodyPadding 10px
-            
-
+ 
         & p
+        & table
             color $blackTextColor    
             font-weight 400
             background-color $bodyLightBackgroundColor
             margin 0
             padding 10px $bodyPadding
 
+        & ul
+        & ol
+        & blockquote
+            padding-top 10px
+
+            & *
+                background transparent
+                padding-top 3px
+                padding-bottom 3px
+                
+
+        & ul
+        & ol
+            padding-top 0
+            padding-left 60px        
+
+        & blockquote
+            font-style italic
+            color $greyTextColor              
+            
+        & table
+            display block
+            border-collapse collapse
+            
+            & th
+            & td
+                border 1px solid $greyTextColor
+                padding 3px 8px
+
         & figure
-            margin 1px 0
+            margin 0
             background-color $bodyBackgroundColor
             padding 0 $bodyPadding 
+            //position relative
+
+            & figcaption
+                padding-top
+                color $darkTextColor
+                //position absolute
+                padding-top 20px
+                padding-left 10px
+                //top 10px 
+                //right $bodyPadding 
+                font-size 0.9em
+                color $darkTextColor
+
+                
+
+            & table
+                display table
+                background-color transparent
+                border none
+
+                & th
+                & td
+                    border none
 
         &:after
             content ''
@@ -71,10 +140,10 @@
 .tags
     ico('\E801')    
 
-.doc
+.category
     ico('\E803')    
 
-.hljs
+.highlight
     display: block;
     overflow-x: auto;
     padding: 0.5em;
@@ -82,89 +151,96 @@
     font-size 1.1em
     text-shadow: 0px 1px 1px $bodyBackgroundColor
 
+    & .line
+        color: $textColor
 
-    &-comment
-    &-quote
+        &:after   
+            content ' ' 
+
+
+
+    & .comment
+    & .quote
         color: $darkTextColor;
         font-style: italic;
 
 
-    &-keyword
-    &-selector-tag
-    &-subst
+    & .keyword
+    & .selector-tag
+    & .subst
         color: $lightTextColor;
-        font-weight: bold;
+        font-weight: 300;
 
 
-    &-number
-    &-literal
-    &-variable
-    &-template-variable
-    &-tag &-attr
+    & .number
+    & .literal
+    & .variable
+    & .template-variable
+    & .tag & .attr
         color: #008080;
 
 
-    &-string
-    &-doctag
+    & .string
+    & .doctag
         color: #d14;
 
 
-    &-title
-    &-section
-    &-selector-id
-        color: #900;
-        font-weight: bold;
+    & .title
+    & .section
+    & .selector-id
+        color: #28AE7B;
+        //font-weight: bold;
 
 
-    &-subst
+    & .subst
         font-weight: normal;
 
 
-    &-type
-    &-class &-title
+    & .type
+    & .class & .title
         color: #458;
-        font-weight: bold;
+        //font-weight: bold;
 
 
-    &-tag
-    &-name
-    &-attribute
+    & .tag
+    & .name
+    & .attribute
         color: #000080;
         font-weight: normal;
 
 
-    &-regexp,
-    &-link
+    & .regexp,
+    & .link
         color: #009926;
 
 
-    &-symbol,
-    &-bullet
+    & .symbol,
+    & .bullet
         color: #990073;
 
 
-    &-built_in,
-    &-builtin-name
+    & .built_in,
+    & .builtin-name
         color: #0086b3;
 
 
-    &-meta
+    & .meta
         color: #cccccc;
         font-weight: bold;
 
 
-    &-deletion
+    & .deletion
         background: #fdd;
 
 
-    &-addition
+    & .addition
         background: #dfd;
 
 
-    &-emphasis
+    & .emphasis
         font-style: italic;
 
 
-    &-strong
+    & .strong
         font-weight: bold;
 

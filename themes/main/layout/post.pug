@@ -1,11 +1,10 @@
 extends ./base.pug
 
 block title
-    = page.title 
+    = capitalize(page.title) 
 
 block head
     link(rel='stylesheet' type='text/css' href='/styles/post.css')  
-    script(src='/scripts/highlight.pack.js')
 
 mixin tags(tags)
     - 
@@ -25,38 +24,33 @@ mixin categories(categories)
         }
 
     if c.length
-        .post__categories.doc!= c.join(', ')      
+        .post__categories.category!= c.join(', ')      
 
 block content
-    div(id='fb-root')
+    //div(id='fb-root')
     
-    // script.
-    //     (function(d, s, id) {
-    //     var js, fjs = d.getElementsByTagName(s)[0];
-    //     if (d.getElementById(id)) return;
-    //     js = d.createElement(s); js.id = id;
-    //     js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7";
-    //     fjs.parentNode.insertBefore(js, fjs);
-    //     }(document, 'script', 'facebook-jssdk'));
+    //-  script.
+    //-      (function(d, s, id) {
+    //-      var js, fjs = d.getElementsByTagName(s)[0];
+    //-      if (d.getElementById(id)) return;
+    //-      js = d.createElement(s); js.id = id;
+    //-      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7";
+    //-      fjs.parentNode.insertBefore(js, fjs);
+    //-      }(document, 'script', 'facebook-jssdk'));
     .post
         .post__header
-            h1.post__title= page.title
+            h1.post__title= capitalize(page.title)
             .post__meta
                 .post__date.clndr= page.date.format('YYYY MMM DD')
                 +categories(page.categories)
                 +tags(page.tags)
 
         .post__content!= page.content
+        //- .post__share
+        //-     - var link = 'https://www.facebook.com/sharer/sharer.php?href=' + page.permalink;
+        //-     a(href!=link onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;") share
 
         // .post__comments
         //     .fb-comments(data-href!=page.link data-width='1050' data-numposts='3')
-
-    script.
-        var pres = document.getElementsByTagName('pre'),
-            l = pres.length;
-
-        for (var i = 0; i < l; i++) {
-            hljs.highlightBlock(pres[i]);
-        }
 
         

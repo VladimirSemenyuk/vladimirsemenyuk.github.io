@@ -1,0 +1,10 @@
+extends ./base.pug
+
+block title
+    = capitalize(page.title) 
+
+block head
+    link(rel='stylesheet' type='text/css' href='/styles/page.css')  
+
+block content
+    != page.content

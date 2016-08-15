@@ -36,6 +36,21 @@ body
     width $width
     margin 0 auto
 
+.git
+    ico('\f113')
+
+.fb
+    ico('\E802')
+
+.in
+    ico('\f0e1')    
+
+.mail
+    ico('\f0e0')    
+
+.tele
+    ico('\f124') 
+
 h1
     letter-spacing 0.05em
     font-size 2.3em
@@ -58,9 +73,10 @@ h1
         border-radius 85px
         border: 2px solid $textColor
         box-shadow 0 2px 2px $bodyBackgroundColor
-        margin 35px auto
+        margin 35px auto 0
         background url(/images/portrait.jpg) center center no-repeat
         background-size cover
+        display inline-block
 
     &__link
         text-decoration none
@@ -85,18 +101,18 @@ h1
         text-shadow none
         line-height 0em
 
-    // & .git
-    //     topIco(31px)
+    & .git
+        topIco(31px)
 
-    // & .fb
-    //     topIco(90px)
+    & .fb
+        topIco(90px)
 
-    // & .in
-    //     topIco(60px)
+    & .in
+        topIco(60px)
 
-    // & .mail
-    //     topIco(120px)
+    & .mail
+        topIco(120px)
 
-    // & .tele
-    //     topIco(4px)    
+    & .tele
+        topIco(4px)    
 

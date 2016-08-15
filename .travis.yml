@@ -1,0 +1,20 @@
+language: node_js
+branches:
+  only:
+    - service
+before_install:
+  - npm install -g hexo
+  - npm install
+install:
+  - hexo generate
+env:
+  global:
+    - secure: L3XFR7vq4j8ccwTZ0h33lO2EjL4lIu4B+mTovh4Dz41mypiwBTfVFztQL8WIgA3qslYp7ThtaMyOKOoAq76zqtGteSLQYgi8/IXFJE7SxVeUaW5lGSEzQpyQAB7dtVUjQlMR74mtdJKFkSKRTtEfSBG2hwvsiKGRPnoTIKuRLQSYK1tpINVCqJS374f5EiOr847G4cbyrSPtdlCYUjnWfI+f1Yek065NmtM0xYITQBhher2u6iJZIkFU/G0MAHDHLYrj/8bICXpQI3PYmO887FPewzo/edY5+I4Nk8oqmVTP9IgipMAsektyzsmmP+K3oc/nsmbhQpwLakbS08oavEG/zqh3FIbBQkdadjVWf49ajalNevTL37zG7ozKD8dloI/kEtkQLT+ocSUNS7hjigJ42V4PLt4dAnuBvC/ncmQSIbmBxkpKMq9x1FXBrOGp17K1vvoORjC1SkPVkcjdSaVGA5yhVF5RMjsjA0VUJOJvWWDmCetltMCuWm+/f8tpxTACbLIu8jWbixOvUtAUTVMKBFHiBPkI36vSP7iQ4FlkJdEEcFx7KTDwxU7sbG3RufQAZ2lM6/4XfOZ/4XNuFCbT2pfDI4yLnMBx+b9AfK3zsB2o4IuWlA+VR/3CP9gdiuDFyVoPQaz8OvSukbx0L3Otgm8Qmm1+9Po/jbL+jVk=
+before_script:
+- git config --global user.name 'Vladimir Semenyuk via Travis CI'
+- git config --global user.email 'mail@vsemenyuk.pro'
+- sed -i'' "s~https://github.com/VladimirSemenyuk/vladimirsemenyuk.github.io~https://${GH_TOKEN}:x-oauth-basic@github.com/VladimirSemenyuk/vladimirsemenyuk.github.io~" _config.yml
+script:
+- hexo deploy --silent
+
+    

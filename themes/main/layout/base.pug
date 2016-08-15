@@ -1,3 +1,47 @@
+include ./mixins/link.pug
+include ./mixins/mail-link.pug
+
+-
+    var small = "(a|an|and|as|at|but|by|en|for|if|in|of|on|or|the|to|v[.]?|via|vs[.]?)",
+        punct = "([!\"#$%&'()*+,./:;<=>?@[\\\\\\]^_`{|}~-]*)";
+
+    function capitalize(title){
+        var parts = [], split = /[:.;?!] |(?: |^)["Ò]/g, index = 0;
+        
+        while (true) {
+            var m = split.exec(title);
+
+            parts.push( title.substring(index, m ? m.index : title.length)
+                .replace(/\b([A-Za-z][a-z.'Õ]*)\b/g, function(all){
+                    return /[A-Za-z]\.[A-Za-z]/.test(all) ? all : upper(all);
+                })
+                .replace(RegExp("\\b" + small + "\\b", "ig"), lower)
+                .replace(RegExp("^" + punct + small + "\\b", "ig"), function(all, punct, word){
+                    return punct + upper(word);
+                })
+                .replace(RegExp("\\b" + small + punct + "$", "ig"), upper));
+            
+            index = split.lastIndex;
+            
+            if ( m ) parts.push( m[0] );
+            else break;
+        }
+        
+        return parts.join("").replace(/ V(s?)\. /ig, " v$1. ")
+            .replace(/(['Õ])S\b/ig, "$1s")
+            .replace(/\b(AT&T|Q&A)\b/ig, function(all){
+                return all.toUpperCase();
+            });
+    };
+    
+    function lower(word){
+        return word.toLowerCase();
+    }
+    
+    function upper(word){
+        return word.substr(0,1).toUpperCase() + word.substr(1);
+    }  
+
 doctype html
 html(lang="en")
     head
@@ -31,17 +75,21 @@ html(lang="en")
         .header 
             a.header__link(href='/')
                 .header__portrait
+                div
                 h1.header__name= config.title
             .header__description= config.subtitle
             
-            //+mail_link('','mail@vsemenyuk.pro')(class="mail")
-            //+link('','www.facebook.com/vladimir.semenyuk.31')(class="fb")
-            //+link('','www.linkedin.com/in/vladimir-semenyuk-9b417871')(class="in")
-            //+link('','github.com/VladimirSemenyuk/')(class="git")
-            //+link('','telegram.me/vladimirsemenyuk')(class="tele")
+            +mail_link('','mail@vsemenyuk.pro')(class="mail")
+            +link('','https://www.facebook.com/vladimir.semenyuk.31')(class="fb")
+            +link('','https://www.linkedin.com/in/vladimir-semenyuk-9b417871')(class="in")
+            +link('','https://github.com/VladimirSemenyuk/')(class="git")
+            +link('','https://telegram.me/vladimirsemenyuk')(class="tele")
 
         .body 
             block content
+
+        .info
+            block info    
 
     script.
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

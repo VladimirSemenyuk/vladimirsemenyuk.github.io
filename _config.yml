@@ -34,14 +34,36 @@ titlecase: false # Transform title into titlecase
 external_link: true # Open external links in new tab
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
 relative_link: false
 future: true
 highlight:
   enable: true
   line_number: true
-  auto_detect: false
-  tab_replace:
+  auto_detect: true
+  tab_replace: true
+prism_plugin:
+  mode: 'preprocess' 
+  theme: 'default'
+markdown:
+  render:
+    html: true
+    xhtmlOut: false
+    breaks: false
+    linkify: true
+    typographer: true
+    quotes: '“”‘’'
+  anchors:
+    # Minimum level for ID creation. (Ex. h2 to h6)
+    level: 2
+    # A suffix that is prepended to the number given if the ID is repeated.
+    collisionSuffix: 'v'           
+    # If `true`, creates an anchor tag with a permalink besides the heading.
+    permalink: false              
+    # Class used for the permalink anchor tag.
+    permalinkClass: header-anchor 
+    # The symbol used to make the permalink
+    permalinkSymbol: ¶
 
 # Category & Tag
 default_category: uncategorized
@@ -72,6 +94,7 @@ deploy:
   repo: https://github.com/VladimirSemenyuk/vladimirsemenyuk.github.io
   branch: test
 
+degree: Engineer's degree in Information Systems and Technologies
 elements:
   summary:
     name: 'summary'

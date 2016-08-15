@@ -8,7 +8,7 @@ mixin articles-list
 
 mixin article(text, href, sameWindow)
     li.articles-list__item
-        +link(text, href, sameWindow)(class='article')
+        +link(capitalize(text), href, sameWindow)(class='article')
 
 +element(config.elements.articles)
     - 

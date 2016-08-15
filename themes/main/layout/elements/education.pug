@@ -3,7 +3,7 @@ include ../mixins/info-block.pug
 include ../mixins/link.pug
 
 +element(config.elements.education)    
-    h2.degree Engineer's Degree in Information Systems and Technologies 
+    h2.degree!= capitalize(config.degree)
     .degree-info!= 'Bauman Moscow State Technical University (2006 &mdash; 2012)'
 
     ul.blocks-list
