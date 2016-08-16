@@ -1,7 +1,7 @@
 extends ./base.pug
 
 block title
-    = capitalize(page.title) 
+    != capitalize(page.title) + ' &mdash; ' + config.title 
 
 block head
     link(rel='stylesheet' type='text/css' href='/styles/page.css')  
