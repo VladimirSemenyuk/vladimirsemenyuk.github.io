@@ -15,9 +15,9 @@ mixin responsibility
         +info_block('Target.My.com', 'Head of Frontend Development Department', '//target.my.com', 2013)
             +responsibilities
                 +responsibility 
-                    | Development of 
+                    = 'Development of 3 projects including ' 
                     +link('Target.My.com', 'http://target.my.com') 
-                    = ' and '        
+                    = ' and '         
                     +link('Tracker.My.com', 'http://target.my.com')
                 +responsibility
                     | Development and maintenance of ad templates and scripts at VK.com, Odnoklassniki.ru, Mail.ru and other
@@ -43,7 +43,7 @@ mixin responsibility
                 +responsibility 
                     | Creation of mailings and promo stuff
 
-        +info_block('Web and Print', 'Developer', null, START_CAREER_YEAR, 2012)
+        +info_block('Web and Print', 'Developer', null, 2009, 2012)
             +responsibilities
                 +responsibility 
                     | Development of lots of small sites using PHP, Javascript
