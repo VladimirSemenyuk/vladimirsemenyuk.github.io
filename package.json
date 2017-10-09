@@ -7,8 +7,8 @@
     "version": "3.3.8"
   },
   "scripts": {
-    "start": "npm run render && node node_modules/http-server/bin/http-server",
-    "render": "stylus styles/style.styl --out ./styles && pug <templates/index.pug> index.html -p templates/base.pug"
+    "start": "hexo server",
+    "render": "node_modules/.bin/stylus styles/style.styl --out ./styles && pug <templates/index.pug> index.html -p templates/base.pug"
   },
   "repository": {
     "type": "git",
@@ -32,6 +32,7 @@
     "hexo-renderer-markdown-it": "^3.4.1",
     "hexo-renderer-pug": "0.0.5",
     "hexo-renderer-stylus": "^0.3.1",
-    "hexo-server": "^0.2.0"
+    "hexo-server": "^0.2.0",
+    "stylus": "^0.54.5"
   }
 }

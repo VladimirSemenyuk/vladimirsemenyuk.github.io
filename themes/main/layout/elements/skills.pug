@@ -13,21 +13,24 @@ mixin skill(text, grade)
 
 +element(config.elements.skills)
     ul.skills-list
+        +skill('Leadership', 7)
+            | Experienced in managing number of teams, experienced in Agile, 
+        +skill('Architecture', 9)
+            | Development and deployment tools, NPM, Grunt, Gulp, experienced in framework development, REST API, RabbitMQ, 
         +skill('JavaScript', 10)
             | Expertise in OOP, Design Patterns, ES2015, ES2016, modules (AMD, CommonJS, UMD), Backbone, JQuery, Node.js, JSX etc.
         +skill('TypeScript', 10)
             | Classes, Interfaces, Decorators, Generics etc.
         +skill('Testing', 8)
             | Karma, Mocha, ChaiJS
-        +skill('Frontend Architecture', 9)
-            | Development and deployment tools, NPM, Grunt, Gulp, experienced in framework development, working with REST API
         +skill('HTML5', 9)
             | Template engines (Jade/Pug, Handlebars/Mustache), Video API, Audio API, WebSockets, Drag & Drop and other cool features
         +skill('CSS3', 8)
             | Preprocessors (Stylus, experienced in LESS and SASS), transitions, animations etc.
-        +skill('Leadership', 7)
-            | Experiences in controlling a department of 3 teams, cool at leading teams up to 7 members. Experienced in Agile
+        +skill('Databases', 5)
+            | Both SQL and NoSQL, in–memory storages
         +skill('Tools', 8)
-            | GIT, GitLab, Jira
-        +skill('Other', 3)
-            | Also has some experience with MongoDB, Redis     
+            | GIT, GitLab, Jira, Docker, Elastick Search + Logstash + Kibana, Ansible
+        +skill('Other', 8)
+            | MS Azure
+
