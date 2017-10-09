@@ -1,0 +1,184 @@
+@font-face {
+  font-family: 'fontello';
+  src: url("../font/fontello.eot?96255276");
+  src: url("../font/fontello.eot?96255276#iefix") format('embedded-opentype'), url("../font/fontello.woff?96255276") format('woff'), url("../font/fontello.ttf?96255276") format('truetype'), url("../font/fontello.svg?96255276#fontello") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+html {
+  background: #4480b8;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.9em;
+  line-height: 1.7em;
+  font-weight: 100;
+}
+@media (max-width: 1300px) {
+  html {
+    background: #4480b8 url("/images/background-small.jpg") no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+}
+@media (min-width: 1301px) and (max-width: 2700px) {
+  html {
+    background: #4480b8 url("/images/background-medium.jpg") no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+}
+@media (min-width: 2701px) {
+  html {
+    background: #4480b8 url("/images/background.jpg") no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+}
+body {
+  width: 1100px;
+  margin: 0 auto;
+}
+.git {
+  position: relative;
+  margin-left: 25px;
+}
+.git:before {
+  font-family: "fontello";
+  content: '\f113';
+  position: absolute;
+  left: -25px;
+}
+.fb {
+  position: relative;
+  margin-left: 25px;
+}
+.fb:before {
+  font-family: "fontello";
+  content: '\E802';
+  position: absolute;
+  left: -25px;
+}
+.in {
+  position: relative;
+  margin-left: 25px;
+}
+.in:before {
+  font-family: "fontello";
+  content: '\f0e1';
+  position: absolute;
+  left: -25px;
+}
+.mail {
+  position: relative;
+  margin-left: 25px;
+}
+.mail:before {
+  font-family: "fontello";
+  content: '\f0e0';
+  position: absolute;
+  left: -25px;
+}
+.tele {
+  position: relative;
+  margin-left: 25px;
+}
+.tele:before {
+  font-family: "fontello";
+  content: '\f124';
+  position: absolute;
+  left: -25px;
+}
+h1 {
+  letter-spacing: 0.05em;
+  font-size: 2.3em;
+  font-weight: 400;
+  margin: 25px 0 30px;
+}
+.body {
+  list-style: none;
+  margin: 70px 0 40px;
+  padding: 0;
+  box-shadow: 0 2px 2px rgba(20,20,20,0.3);
+}
+.header {
+  text-align: center;
+  position: relative;
+}
+.header__portrait {
+  width: 170px;
+  height: 170px;
+  border-radius: 85px;
+  border: 2px solid #ddd;
+  box-shadow: 0 2px 2px rgba(20,20,20,0.7);
+  margin: 35px auto 0;
+  background: url("/images/portrait.jpg") center center no-repeat;
+  background-size: cover;
+  display: inline-block;
+}
+.header__link {
+  text-decoration: none;
+  border: none;
+}
+.header__link:hover {
+  border: none;
+}
+.header__name {
+  display: inline-block;
+  font-size: 3em;
+  padding: 0;
+  text-transform: uppercase;
+  color: #f5f5f5;
+  margin: 25px 0 30px;
+  text-shadow: 0px 1px 1px rgba(20,20,20,0.7);
+}
+.header__description {
+  font-style: italic;
+  font-size: 1.2em;
+  color: #333;
+  text-shadow: none;
+  line-height: 0em;
+}
+.header .git {
+  position: absolute;
+  top: 10px;
+  right: 31px;
+}
+.header .git:before {
+  text-shadow: none;
+  color: rgba(20,20,20,0.7);
+}
+.header .fb {
+  position: absolute;
+  top: 10px;
+  right: 90px;
+}
+.header .fb:before {
+  text-shadow: none;
+  color: rgba(20,20,20,0.7);
+}
+.header .in {
+  position: absolute;
+  top: 10px;
+  right: 60px;
+}
+.header .in:before {
+  text-shadow: none;
+  color: rgba(20,20,20,0.7);
+}
+.header .mail {
+  position: absolute;
+  top: 10px;
+  right: 120px;
+}
+.header .mail:before {
+  text-shadow: none;
+  color: rgba(20,20,20,0.7);
+}
+.header .tele {
+  position: absolute;
+  top: 10px;
+  right: 4px;
+}
+.header .tele:before {
+  text-shadow: none;
+  color: rgba(20,20,20,0.7);
+}

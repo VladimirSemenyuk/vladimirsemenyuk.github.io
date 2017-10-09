@@ -1,0 +1,239 @@
+.post__header {
+  background-color: rgba(240,240,240,0.95);
+  padding: 25px;
+}
+.post__title {
+  color: #333;
+  margin: 0 0 20px;
+  line-height: 1.5em;
+  letter-spacing: 0em;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.2);
+}
+.post__meta {
+  color: #555;
+}
+.post__meta * {
+  margin-right: 40px;
+  display: inline-block;
+}
+.post__tags {
+  font-style: italic;
+}
+.post__content code {
+  font-size: 1.2em;
+  background-color: #ccc;
+  padding: 2px 5px;
+  border-radius: 2px;
+}
+.post__content hr {
+  margin-top: 2px;
+  border: none;
+  margin-bottom: 2px;
+}
+.post__content a {
+  color: #555;
+  text-decoration: none;
+  border-bottom: 1px dotted #555;
+}
+.post__content a:hover {
+  color: #333;
+  border-bottom: 1px dotted #333;
+}
+.post__content h1,
+.post__content h2,
+.post__content h3,
+.post__content h4,
+.post__content h5,
+.post__content h6,
+.post__content ul,
+.post__content ol,
+.post__content blockquote {
+  color: #333;
+  font-weight: 400;
+  background-color: rgba(240,240,240,0.95);
+  margin: 0;
+  padding: 25px 25px 10px;
+}
+.post__content p,
+.post__content table {
+  color: #333;
+  font-weight: 400;
+  background-color: rgba(240,240,240,0.95);
+  margin: 0;
+  padding: 10px 25px;
+}
+.post__content ul,
+.post__content ol,
+.post__content blockquote {
+  padding-top: 10px;
+}
+.post__content ul *,
+.post__content ol *,
+.post__content blockquote * {
+  background: transparent;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+.post__content ul,
+.post__content ol {
+  padding-top: 0;
+  padding-left: 60px;
+}
+.post__content blockquote {
+  font-style: italic;
+  color: #555;
+}
+.post__content table {
+  display: block;
+  border-collapse: collapse;
+}
+.post__content table th,
+.post__content table td {
+  border: 1px solid #555;
+  padding: 3px 8px;
+}
+.post__content figure {
+  margin: 0;
+  background-color: rgba(20,20,20,0.7);
+  padding: 0 25px;
+}
+.post__content figure figcaption {
+padding-top
+  color: #ccc;
+  padding-top: 20px;
+  padding-left: 10px;
+  font-size: 0.9em;
+  color: #ccc;
+}
+.post__content figure table {
+  display: table;
+  background-color: transparent;
+  border: none;
+}
+.post__content figure table th,
+.post__content figure table td {
+  border: none;
+}
+.post__content:after {
+  content: '';
+  background-color: rgba(240,240,240,0.95);
+  display: block;
+  padding-top: 25px;
+}
+.post__comments {
+  margin: 1px 0;
+  background-color: rgba(240,240,240,0.95);
+  padding: 25px;
+}
+.clndr {
+  position: relative;
+  margin-left: 25px;
+}
+.clndr:before {
+  font-family: "fontello";
+  content: '\E800';
+  position: absolute;
+  left: -25px;
+}
+.tags {
+  position: relative;
+  margin-left: 25px;
+}
+.tags:before {
+  font-family: "fontello";
+  content: '\E801';
+  position: absolute;
+  left: -25px;
+}
+.category {
+  position: relative;
+  margin-left: 25px;
+}
+.category:before {
+  font-family: "fontello";
+  content: '\E803';
+  position: absolute;
+  left: -25px;
+}
+.highlight {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  color: #ddd;
+  font-size: 1.1em;
+  text-shadow: 0px 1px 1px rgba(20,20,20,0.7);
+}
+.highlight .line {
+  color: #ddd;
+}
+.highlight .line:after {
+  content: ' ';
+}
+.highlight .comment,
+.highlight .quote {
+  color: #ccc;
+  font-style: italic;
+}
+.highlight .keyword,
+.highlight .selector-tag,
+.highlight .subst {
+  color: #f5f5f5;
+  font-weight: 300;
+}
+.highlight .number,
+.highlight .literal,
+.highlight .variable,
+.highlight .template-variable,
+.highlight .tag .highlight .attr {
+  color: #008080;
+}
+.highlight .string,
+.highlight .doctag {
+  color: #d14;
+}
+.highlight .title,
+.highlight .section,
+.highlight .selector-id {
+  color: #28ae7b;
+}
+.highlight .subst {
+  font-weight: normal;
+}
+.highlight .type,
+.highlight .class .highlight .title {
+  color: #458;
+}
+.highlight .tag,
+.highlight .name,
+.highlight .attribute {
+  color: #000080;
+  font-weight: normal;
+}
+.highlight .regexp,
+.highlight .link {
+  color: #009926;
+}
+.highlight .symbol,
+.highlight .bullet {
+  color: #990073;
+}
+.highlight .built_in,
+.highlight .builtin-name {
+  color: #0086b3;
+}
+.highlight .meta {
+  color: #ccc;
+  font-weight: bold;
+}
+.highlight .deletion {
+  background: #fdd;
+}
+.highlight .addition {
+  background: #dfd;
+}
+.highlight .emphasis {
+  font-style: italic;
+}
+.highlight .strong {
+  font-weight: bold;
+}
